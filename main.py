@@ -52,7 +52,7 @@ def SOM_RBF():
     tc = (a-c)/a
     accuracy0 = np.maximum(tb,tc).mean()
     center_vectors= model.weight.T
-    print('Building SOM model...')
+    print('Building RBF model...')
     RBF_model = RBF(33, center_vectors, 1)
     RBF_model = RBF_model.to(device)
     weight = RBF_model.train(X,train_label)
